@@ -1,0 +1,234 @@
+/* 全局设置 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(0,87,89);
+    color: #fff;
+}
+
+/*icon引入  */
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.ttf?t=1655962390894') format('truetype');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+} 
+
+/*标题样式  */
+.nav{
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+}
+
+/* 头部样式开始 */
+.info{
+    padding: 15px;
+    display: flex;
+}
+
+.info-img{
+    width: 100px;
+    height: 138px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 15%;
+    position: relative;
+}
+
+/* .info-img img{
+    width: 100%;
+    height: 100%;
+} */
+
+.info-img>span{
+    font-size: 32px;
+    left: 5px;
+    top: 100px;
+    color: rgba(0,0,0,0.8);
+}
+
+.info-XQ{
+    flex: 1;
+    margin-left: 14px;
+}
+.info-XQ h1{
+    width: 150px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.name-en{
+    width: 200px;
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.type-time{
+    margin-top: 13px;
+}
+.type{
+    font-size: 0;
+}
+.type span{
+    font-size: 12px;
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.type i{
+    margin-left: 3px;
+    padding: 2px;
+    font-size: 12px;
+    font-style: normal;
+    background-color: rgb(0,69,71);
+    border-radius: 3px;
+}
+.time span{
+    font-size: 12px;
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.look{
+    display: flex;
+}
+.want , .done{
+    flex: 1;
+    font-size: 16px;
+    background-color: rgba(255,255,255,0.3);
+    text-align: center;
+    border-radius: 5px;
+}
+.want{
+    margin-right: 10px;
+}
+/* 头部样式结束 */
+
+/* 评分样式开始 */
+/* 评分全局样式 */
+.move-rate{
+    padding: 15px 10px;
+    background-color: rgba(0,0,0,0.18);
+    margin: 10px;
+    border-radius: 10px;
+}
+/* 评分top样式 */
+.rate-top{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;     
+    /* 左右两端对其 */
+    opacity: 0.7;
+}
+.title-left{
+    display: flex;
+    align-items: center;
+}
+.title-left img{
+    width: 16px;
+    height: 16px;
+}
+.rjt{
+    width: 8px;
+    height: 8px;
+    border: 1px solid #eee;
+    display: inline-block;
+    border-left: none;
+    border-bottom: none;
+    transform:rotate(45deg);
+}
+/* 评分top结束 */
+
+/* 评分bottom开始 */
+.rate-bottom{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+/* bottom左 */
+.bottom-left{
+    text-align: right;
+}
+.bottom-left>.num{
+    font-size: 30px;
+    color: rgb(255, 230, 1);
+    font-weight: 500;
+}
+.bottom-left .people{
+    font-size: 14px;
+    opacity: 0.6;
+}
+/* bottom中 */
+.bottom-mind{
+    margin-left: 10px;
+}
+
+.star-bar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.star{
+    font-size: 0;
+}
+.star img{
+    width: 10px;
+    height: 10px;
+    margin-left: 0.2px;
+}
+.bar{
+    width: 70px;
+    height: 4px;
+    margin-left: 3px;
+    background-color:rgba(255,255,255,0.3);
+}
+.persent{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* bottom右 */
+.bottom-right{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid rgba(152,140,106,0.7);
+    border-radius: 10%;
+    margin-left: 10px;
+}
+.brl{
+    margin: 1px;
+    padding-top: 10px;
+    text-align: center;
+    width: 75px;
+    height: 34px;
+    background-color: rgba(102,110,91,0.7);
+    border-radius: 5px;
+    font-size: 0;
+}
+.top , .one{
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(214,184,97, 1);
+    margin-top: 10px;
+}
+.week , .list{
+    font-size: 12px;
+    color: rgba(255,244,189,0.7);
+}
+/* 评分bottom部分结束 */
