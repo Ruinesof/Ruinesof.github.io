@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: #fff;
+  text-align: center;
+  font-size: 10px;
+}
+body {
+  height: 100vh;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock {
+  width: 60rem;
+  height: 60rem;
+  border: 20px solid rgba(2,155,250,0.742);
+  border-radius: 50%;
+  box-shadow: -5px -5px 10px rgba(141,141,141,0.322), inset 5px 5px 10px rgba(141,141,141,0.6), inset -5px -5px 10px rgba(141,141,141,0.322), 5px 5px 10px rgba(141,141,141,0.6);
+  background: #000 url(./build.png) no-repeat 80px 81px;
+  background-size: 74%;
+  overflow: hidden;
+  padding: 2rem;
+}
+.blackface {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  padding: 10px;
+}
+.blackface::before,
+.blackface::after,
+.tick {
+  content: '';
+  width: 1rem;
+  height: 60rem;
+  background: rgba(85,153,51,0.6);
+  position: absolute;
+  border-radius: 8px;
+  left: 49%;
+  z-index: 0;
+}
+.blackface::before{
+  transform: rotate(90deg);
+}
+.tick1{
+  transform: rotate(30deg);
+}
+.tick2{
+  transform: rotate(60deg);
+}
+.tick3{
+  transform: rotate(120deg);
+}
+.tick4{
+  transform: rotate(150deg);
+}
+.tick{
+  width: 3px;
+}
+
+.top-face{
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  background: #000 url(./build.png);
+  border-radius: 50%;
+  background-size: 95%;
+  z-index: 2;
+}
+
+.han{
+  width: 50%;
+  height: 6px;
+  background: rgb(255, 0, 0);
+  position: absolute;
+  border-radius: 5px;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  transform-origin: 100%;
+  /* 旋转点的位置 */
+  transform: rotate(90deg);
+  transition: 0.8s;
+}
+.han-h{
+  width: 30%;
+  z-index: 3;
+  background: rgb(247, 0, 255);
+}
+.han-m{
+  width: 40%;
+  height: 5px;
+  z-index: 4;
+}
+.han-s{
+  height: 3px;
+  background: orange;
+  z-index: 5;
+}
