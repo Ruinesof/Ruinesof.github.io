@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+.bg{
+    width: 100vw;
+    height: 200px;
+    background: url(https://ts1.cn.mm.bing.net/th/id/R-C.2de284b41121924b2bdc259705c5d6cd?rik=%2bV4EphO7TR2knA&riu=http%3a%2f%2fxysj.cditv.cn%2f2019%2f0416%2f20190416085829504.jpg&ehk=bvEnig3f3A5ftbcLxTsS5IR0dJgdSigBxKQuiPoJxEs%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    /* 背景虚化 */
+    position: absolute;
+    z-index: -1;
+    /* 层级变为-1,使被覆盖的box显现出来 */
+}
+header{
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.cont{
+    width: 100vw;
+    height: calc(100vh - 13rem);
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    border-radius: 31px;
+    box-shadow:0px 0px 5px #eee;
+    z-index: -1;
+}
+.logo{
+    width: 25.6rem;
+    height: 28.3rem;
+    overflow: hidden;
+    margin: 0 auto;
+    /* margin-top: -4rem; */
+    position: relative;
+    top: -4rem;
+    /* 和margin-top一样是向上移动
+    relative相对定位
+    元素在定位时是相对于原本的位置来定位
+    */
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #000;
+}
+.logo img{
+    height: 100%;
+}
+.name{
+    text-align: center;
+}
+.name h2{
+    font-size: 2.1rem;
+    margin-bottom: 0.6rem;
+}
+.def{
+    width: 22.6rem;
+    margin: 0 auto;
+}
+.quic{
+    height: 0.1rem;
+    margin-top: 5.3rem;
+    background-color: #C6C6C6 ;
+}
+.now{
+    width: 50%;
+    height: 100%;
+    background-color: #F03030;
+}
+.time{
+    display: flex;
+    justify-content:space-between;
+}
+.time p{
+    font-size: 0.7rem;
+    color: #C6C6C6;
+}
+
+.conture{
+    display: flex;
+    align-items: center;
+}
+.conture div{
+    flex: 1;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    background-color: #000;
+}
+.cont .mo{
+    margin-right: 0;
+}
+.cont .bo{
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+}
+.mor{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 2rem;
+}
+.mor div{
+    width: 3rem;
+    height: 3rem;
+    background-color: #000;
+}
