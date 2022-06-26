@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #5a7cc2;
+}
+.light{
+    width: 160px;
+    height: 360px;
+    background-color: #222;
+    border: 8px solid white;
+    border-radius: 10%;
+    position: absolute; /*定位为绝对定位*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);    /*向左和上平移自身的50%*/
+}
+.light::after{  /*在light的尾部添加一个伪类*/
+    content: '';    /*伪类标配,一定要的*/
+    width: 48px;
+    height: 128px;
+    position: absolute;     /*定位*/
+    left: 50%;
+    top: 100%;          /*因为是放在最底下所以100%*/
+    transform: translate(-50%);
+    background-image: linear-gradient(rgba(255,255,255,0.8) , #0088ff);
+    opacity: 0.6;   /*透明度,可要可不要*/
+}
+.one{
+    width: 100px;
+    height: 90px;
+    background-color: #000;
+    border-radius: 50%;
+    border-top: 10px solid #000;    /*添加上边线,让红绿灯看起来有沿*/
+    margin: 10px auto;      /*经典居中定位,10px=(360-300)/6上下边距嘛*/
+}
+.red{
+    /* 使用动画:名称 时长 线性 模式 */
+    animation: red 15s linear infinite;
+}
+.orang{
+    animation: orang 15s linear infinite;
+}
+.green{
+    animation: green 15s linear infinite;
+}
+
+/* 自定义动画 名称随意{
+    调用时长的百分之多少{
+        颜色变化
+    }
+    0% 是动画的开始,100% 是动画的完成。
+    用百分比来规定变化的时间,或使用from和to
+    等同于0%和100%
+} */
+@keyframes red{
+    0%{
+        background-color: #000;
+    }
+    2% , 40%{
+        background-color: red;
+    }
+    42% , 100%{
+        background-color: #000;
+    }
+}
+
+@keyframes orang{
+    0% , 20%{
+        background-color: #000;
+    }
+    22% , 40%{
+        background-color: orange;
+    }
+    42% , 80%{
+        background-color: #000;
+    }
+    82% , 100%{
+        background-color: orange;
+    }
+}
+
+@keyframes green{
+    0% , 40%{
+        background-color: #000;
+    }
+    42% , 80%{
+        background-color: green;
+    }
+    82% , 100%{
+        background-color: #000;
+    }
+}
