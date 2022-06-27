@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿微信</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/weui/2.5.9/style/weui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <p>微信</p>
+            <div class="weui-search-bar" id="searchBar">
+                <form id="searchForm" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="searchResult" class="weui-search-bar__form">
+                    <div class="weui-search-bar__box">
+                        <i class="weui-icon-search"></i>
+                        <input type="search" aria-controls="searchResult" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                        <a href="javascript:" role="button" title="清除" class="weui-icon-clear" id="searchClear" wah-hotarea="click"></a>
+                    </div>
+                    <label for="searchInput" class="weui-search-bar__label" id="searchText" wah-hotarea="click" style="transform-origin: 0px 0px; opacity: 1; transform: scale(1, 1);">
+                        <i class="weui-icon-search"></i>
+                        <span aria-hidden="true">搜索</span>
+                    </label>
+                </form>
+                <a href="javascript:" role="button" class="weui-search-bar__cancel-btn" id="searchCancel" wah-hotarea="click">取消</a>
+            </div>
+        </div>
+        <div class="item show">
+            <div class="weui-cells">
+
+                <a aria-labelledby="js_cell_itl1_hd js_cell_itl1_bd js_cell_itl1_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
+                    <span class="weui-cell__hd" id="js_cell_itl1_hd" aria-hidden="true">
+                        <img src="./images/zzjw.jpg" alt="头像" style="width: 60px; margin-right: 16px; display: block;"></span>
+                    <span class="weui-cell__bd" id="js_cell_itl1_bd" aria-hidden="true">
+                        <P>
+                            <span>UserID</span>
+                            <span>time</span>
+                        </P>
+                        <p>Smile Smile!</p>
+                    </span>
+                </a>
+                <a aria-labelledby="js_cell_itl1_hd js_cell_itl1_bd js_cell_itl1_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
+                    <span class="weui-cell__hd" id="js_cell_itl1_hd" aria-hidden="true">
+                        <img src="./images/mkm.jpg" alt="头像" style="width: 60px; margin-right: 16px; display: block;"></span>
+                    <span class="weui-cell__bd" id="js_cell_itl1_bd" aria-hidden="true">
+                        <P>
+                            <span>UserID</span>
+                            <span>time</span>
+                        </P>
+                        <p>尸体在说话</p>
+                    </span>
+                </a>
+                
+            </div>
+        </div>
+        <div class="item itm2">
+            通讯录界面
+        </div>
+        <div class="item itm3">
+            发现界面
+        </div>
+        <div class="item itm4">
+            我的界面
+        </div>
+        <div class="footer">
+            <div role="tablist" aria-label="选项卡标题" class="weui-tabbar">
+                <div id="tab1" role="tab" aria-labelledby="t1_title" aria-describedby="t1_tips" aria-selected="true" aria-controls="panel1" class="weui-tabbar__item weui-bar__item_on" wah-hotarea="click">
+                    <div id="t1_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+                        <img src="./images/wechat.png" alt="" class="weui-tabbar__icon">
+                    </div>
+                    <p id="t1_title" aria-hidden="true" class="weui-tabbar__label">微信</p>
+                </div>
+                <div id="tab2" role="tab" aria-labelledby="t2_title" aria-selected="false" aria-controls="panel2" class="weui-tabbar__item" wah-hotarea="click">
+                    <img src="./images/tongxunlu.png" alt="" class="weui-tabbar__icon">
+                    <p aria-hidden="true" id="t2_title" class="weui-tabbar__label">通讯录</p>
+                </div>
+                <div id="tab3" role="tab" aria-labelledby="t3_title" aria-describedby="t3_tips" aria-selected="false" aria-controls="panel3" class="weui-tabbar__item" wah-hotarea="click">
+                    <div id="t3_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+                        <img src="./images/faxian.png" alt="" class="weui-tabbar__icon">
+                        <span class="weui-badge weui-badge_dot" role="img" alt="new" style="position: absolute; top: 0; right: -6px;"></span>
+                    </div>
+                    <p id="t3_title" aria-hidden="true" class="weui-tabbar__label">发现</p>
+                </div>
+                <div id="tab4" role="tab" aria-labelledby="t4_title" aria-selected="false" aria-controls="panel4" class="weui-tabbar__item" wah-hotarea="click">
+                    <img src="./images/wo.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label" aria-hidden="true" id="t4_title">我</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

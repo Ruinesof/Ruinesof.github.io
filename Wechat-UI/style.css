@@ -1,0 +1,34 @@
+body {
+  background-color: #ededed;
+}
+.header p {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.weui-cell__bd p {
+  line-height: 2;
+  font-size: 18px;
+}
+.weui-cell__bd p span:last-child {
+  float: right;
+  font-size: 12px;
+  font-weight: 400;
+  color: #808080;
+}
+.weui-cell__bd p:last-child {
+  color: #808080;
+  font-weight: 200;
+  font-size: 16px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.item {
+  display: none;
+}
+.show {
+  display: block;
+}
