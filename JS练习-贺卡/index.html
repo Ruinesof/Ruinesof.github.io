@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="book p3d">
+
+        <!-- 右 -->
+        <div class="book-right p3d">
+            <div class="page out"></div>
+            <div class="page item p3d">
+                <div class="shadow flip"></div>
+                <div class="img"></div>
+            </div>
+        </div>
+
+        <!-- 左 -->
+        <div class="book-left p3d">
+            <div class="page item p3d flip">
+                <p>
+                    很久以前,在宇宙中飞散着恶魔碎片。如今,仍然让全宇宙陷入混乱。
+                    为了恢复和平的奥特曼们在宇宙中战斗的同时,利用这些碎片一个接一个地毁灭行星的神秘存在持续着卑劣的暗中活动。
+                    然后那个魔手,终于逼近了「光之国」。
+                    与其对抗的,是英姿飒爽的赛罗奥特曼,和他的徒弟·泽塔奥特曼！
+                    激战最后,泽塔独自一人追击怪兽,前往了地球——
+                    另一方面,在地球上,为了对抗日常出现的怪兽组织了防卫军,怪兽应对机甲部队“STORAGE”,并且热血青年,夏川遥辉就所属其中。
+                    宇宙怪兽袭击地球时,泽塔和遥辉最终相遇了。
+                    至此,两位热血青年的战斗故事拉开了序幕！
+                </p>
+            </div>
+            <div class="page out"></div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    var book = document.querySelector('.book')
+    var left = document.querySelector('.book-left')
+    var right = document.querySelector('.img')
+    var hod = false
+    var center = window.innerWidth / 2
+    var mid = function(val,min,max){
+        return Math.max(min , Math.min(val,max))
+    }
+
+    book.onmousedown = function(){
+        hod = true
+    }
+    window.onmouseup = function(){
+        hod = false
+    }
+    window.onmousemove = function(e){
+        if(hod==true){
+            // 左半本书的角度
+            var deg = mid(
+                ((center - e.pageX + 300) / 300 * -90),
+                (-180),
+                (0)
+            )
+            left.style.transform = `rotateY(${deg}deg)`
+            var deg = mid(
+                (((center - e.pageX + 300) / 300 * -90)/5),
+                (-50),
+                (0)
+            )
+            right.style.transform = `rotateX(${deg}deg)`
+            console.log(deg);
+        }
+    }
+</script>
+</html>
